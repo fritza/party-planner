@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @party.theme %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @party.location %>
+</p>
+
+<p>
+  <strong>When held:</strong>
+  <%= @party.when_held %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @party.host %>
+</p>
+
+<p>
+  <strong>Host email:</strong>
+  <%= @party.host_email %>
+</p>
+
+<%= link_to 'Edit', edit_party_path(@party) %> |
+<%= link_to 'Back', parties_path %>
