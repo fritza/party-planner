@@ -4,6 +4,8 @@ class PartiesController < ApplicationController
   # GET /parties
   # GET /parties.json
   def index
+    # require 'debugger'
+    # debugger
     @parties = Party.all
   end
 
