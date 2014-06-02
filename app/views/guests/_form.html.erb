@@ -26,7 +26,7 @@
   <div class="field">
     <%= f.label :party_id %><br>
     <%= f.select :party_id, 
-       Party.all.collect { |party| [party.human_name, party.id]}
+       Party.all.order(:when_held).collect { |party| [party.human_name, party.id]}
     %>
   </div>
   <div class="actions">
