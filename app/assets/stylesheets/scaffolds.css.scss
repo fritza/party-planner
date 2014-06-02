@@ -67,3 +67,29 @@ div {
     list-style: square;
   }
 }
+
+.banner {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 2em;
+  background: #822;
+  color: white;
+  font-size: 20pt;
+  font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  
+  & a {
+    &:hover {
+      background: #822;
+      color: gray;
+    }
+    &:link {
+      background: #822;
+      text-decoration: none;
+    }
+    &:visited { 
+      color: white; 
+    }
+  }
+}
+
