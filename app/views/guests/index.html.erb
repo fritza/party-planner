@@ -17,7 +17,7 @@
         <td><%= guest.name %></td>
         <td><%= guest.email %></td>
         <td><%= guest.rsvp %></td>
-        <td><%= guest.party %></td>
+        <td><%= guest.party.human_name %></td>
         <td><%= link_to 'Show', guest %></td>
         <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
         <td><%= link_to 'Destroy', guest, method: :delete, data: { confirm: 'Are you sure?' } %></td>

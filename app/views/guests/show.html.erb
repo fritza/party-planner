@@ -17,7 +17,7 @@
 
 <p>
   <strong>Party:</strong>
-  <%= @guest.party %>
+  <%= @guest.party.human_name %>
 </p>
 
 <%= link_to 'Edit', edit_guest_path(@guest) %> |

@@ -25,7 +25,9 @@
   </div>
   <div class="field">
     <%= f.label :party_id %><br>
-    <%= f.text_field :party_id %>
+    <%= f.select :party_id, 
+       Party.all.collect { |party| [party.human_name, party.id]}
+    %>
   </div>
   <div class="actions">
     <%= f.submit %>
