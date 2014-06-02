@@ -23,7 +23,13 @@
 
 <p>
   <strong>Host email:</strong>
-  <%= @party.host_email %>
+  <%= mail_to @party.host_email, nil, subject: "That party on #{@party.when_held}",
+                                body:  <<-EOM
+Hey #{@party.host}!
+
+Who else will be there?
+EOM
+  %>
 </p>
 
 <%= link_to 'Edit', edit_party_path(@party) %> |
