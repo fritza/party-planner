@@ -25,11 +25,15 @@
         <td><%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% party.guests.each do |guest| %>
-      <tr>
+      <tr class='guest-row'>
         <td></td>
         <td><%= guest.name %></td>
         <td><%= guest.email %></td>
         <td><%= guest.rsvp ? 'confirmed' : 'waiting…' %></td>
+        <td></td>
+        <td><%= link_to "Show", controller: "guests", action: "show", id: guest %></td>
+        <td></td>
+        <td></td>
       </tr>
       <% end %>
     <% end %>
