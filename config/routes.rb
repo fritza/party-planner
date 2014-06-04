@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :parties
   root 'parties#index'
+  
+  post 'guests/create_from_cnetid' => 'guests#create_from_cnetid'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

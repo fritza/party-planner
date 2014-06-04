@@ -20,6 +20,8 @@ module PartiesHelper
   - Any whitespace-delimited substrings before the last are rejoined by spaces and wrapped in a +span+ with attributes from +given_params+
   - The last whitespace-delimited substring is treated as the surname, and wrapped in a +span+ with attributes from +surname_params+
   - The whole is wrapped in a +div+ with attributes from +div_params+
+  
+  If the person named is Indonesian, a Brazilian athlete, or an American pop star, and so has one name, it is rendered as though it were a surname.
 =end
   
   class NameSplitter

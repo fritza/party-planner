@@ -2,4 +2,13 @@
 
 <%= render 'form' %>
 
+<hr/>
+
+<%= form_tag('/guests/create_from_cnetid') do -%>
+<label>CNetID:  <%= text_field_tag 'cnetid', '', size:12  %>  </label>
+<%= button_tag do %>
+  Look it up!
+<% end %>
+<% end %>
+
 <%= link_to 'Back', guests_path %>

@@ -60,6 +60,22 @@ class GuestsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def create_from_cnetid
+    puts params
+    @guest = Guest.new_from_cnetid(params[:cnetid])
+    respond_to do |format|
+      if @guest.save
+        format.html { render :edit  }
+        format.json { render :show, status: :created, location: @guest }
+      else
+        format.html { render :new }
+        format.json { render json: @guest.errors, status: :unprocessable_entity }
+      end
+    end
+    
+#    redirect_to action: 'new'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
