@@ -60,6 +60,8 @@ base::       <tt>dc=uchicago,dc=edu</tt>
    # :category: Authentication
    # Attempt a bind on a CNetID and a password.
    #
+   # Keep in mind that all LDAP transactions in this module use the +simple_tls+ encryption method.
+   #
    # ==== Returns
    # true:: if the password is correct for the CNetID
    # false:: if not 
