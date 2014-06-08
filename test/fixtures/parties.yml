@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  theme: MyString
-  location: MyString
-  when_held: 2014-06-01 18:16:02
-  host: MyString
-  host_email: MyString
+evans_farewell:
+  theme: a farewell to Evan Bernstein
+  location: "6045, room 337"
+  when_held: 2014-06-22 12:00:00
+  host: Naren
+  host_email: narenh@uchicago.edu
 
-two:
-  theme: MyString
-  location: MyString
-  when_held: 2014-06-01 18:16:02
-  host: MyString
-  host_email: MyString
+staceys_housewarming:
+  theme: housewarming at Stacey's
+  location: Stacey's new house
+  when_held: 2014-07-01 19:30:00
+  host: Stacey
+  host_email: staceys@uchicago.edu

@@ -1,13 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
+alan:
+  name: Alan Takaoka
+  email: alantak@uchicago.edu
   rsvp: false
-  party_id: 
+  party: 
 
-two:
-  name: MyString
-  email: MyString
+stacey:
+  name: Stacey Shintani
+  email: stacey@uchicago.edu
+  rsvp: true
+  party: staceys_housewarming
+
+chris:
+  name: Chris Riedel
+  email: creidel@uchicago.edu
+  rsvp: true
+  party: evans_farewell
+
+fritz:
+  name: Fritz Anderson
+  email: fritza@uchicago.edu
+  rsvp: true
+  party: evans_farewell
+
+cornelia:
+  name: Cornelia Ann Bailey
+  email: cornelia@uchicago.edu
+  rsvp: true
+  party: staceys_housewarming
+
+oren:
+  name: Oren Sreebny
+  email: orens@uchicago.edu
   rsvp: false
-  party_id: 
+  party: evans_farewell
