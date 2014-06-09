@@ -1,14 +1,17 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'party-planner'
+set :repo_url, 'git@github.com:fritza/party-planner.git'
 
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+# fritza - 9-Jun-2014 - Use the current branch (intended to be "Capistrano")
+#                       It may be prudent to have a branch for the purpose.
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-# set :deploy_to, '/var/www/my_app'
+# fritza - 9-Jun-2014 - Put it into the `planner` tree
+set :deploy_to, '/Users/planner/party-planner'
 
 # Default value for :scm is :git
 # set :scm, :git
