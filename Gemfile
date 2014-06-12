@@ -4,7 +4,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+
+group :production do
+  gem 'mysql'
+  gem 'mysql2', '~> 0.3.11'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,3 +52,5 @@ gem 'debugger2', :git => "git://github.com/ko1/debugger2.git"
 
 gem 'net-ldap', '~> 0.6.1'
 
+# This should not be necessary, but WEBrick serves blank pages out of Rack.
+gem 'thin'
