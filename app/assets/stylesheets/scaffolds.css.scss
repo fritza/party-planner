@@ -1,15 +1,21 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: HelveticaNeue, helvetica, verdana, arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+p, ol, ul {
+  font-family: HelveticaNeue,helvetica, verdana, arial, sans-serif;
+  font-size: 18px;
   line-height: 18px;
+}
+
+td {
+  font-family: HelveticaNeue,helvetica, verdana, arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 pre {
@@ -77,7 +83,7 @@ $banner-padding: 14px;
   color: white;
   font-size: 20pt;
   font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   
   & a {
     &:hover {
@@ -94,8 +100,8 @@ $banner-padding: 14px;
   }
 }
 
-$form-header-font-size: 20px;
-$form-header-height: 1.3 * $form-header-font-size;
+$form-header-font-size: 26px;
+$form-header-height: 1.1 * $form-header-font-size;
 
 #form-header {
   background: #228;
@@ -115,7 +121,7 @@ $form-header-height: 1.3 * $form-header-font-size;
   }
   
   #last-name {
-    font-weight: 600;
+    font-weight: 700;
   }
 }
 
