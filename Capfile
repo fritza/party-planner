@@ -15,9 +15,8 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/rails
 #
 require 'capistrano/rvm'
-# fritza - 9-Jun-2014 - I’m not sure this is a good thing to do.
-# TODO: See what rbenv is.
-require 'capistrano/rbenv'
+# It appears rbenv is a version manager like RVM; I doubt it’s a good think to mix in.
+# require 'capistrano/rbenv'
 # require 'capistrano/chruby'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
