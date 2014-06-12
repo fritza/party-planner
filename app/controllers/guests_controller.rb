@@ -65,15 +65,22 @@ class GuestsController < ApplicationController
     puts params
     @guest = Guest.new_from_cnetid(params[:cnetid])
     respond_to do |format|
-      if @guest.save
+      if ! @guest
+        @guest = Guest.new
+        flash[:notice] = "Nobody has the CNetID #{params[:cnetid]}"
+        format.html {render :new }
+        format.json {render json: nil, status: :unprocessable_entity }
+        # FIXME: I’m sure the JSON format is wrong.
+        # Including: What do I do for json:, which seems to want an error array?
+      elsif @guest && @guest.save
         format.html { render :edit  }
         format.json { render :show, status: :created, location: @guest }
       else
         format.html { render :new }
+        # FIXME: There’s no guest, so no errors.
         format.json { render json: @guest.errors, status: :unprocessable_entity }
       end
     end
-    
 #    redirect_to action: 'new'
   end
 

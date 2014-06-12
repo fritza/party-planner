@@ -19,7 +19,11 @@
 
 <p>
   <strong>Party:</strong>
-  <%= @guest.party.human_name %>
+  <% if @guest.party %>
+    <%= @guest.party.human_name %>
+  <% else %>
+    (none!)
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_guest_path(@guest) %> |
