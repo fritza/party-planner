@@ -1,0 +1,5 @@
+Hey #{guest.name}!
+
+Remember to get to #{party.location} at #{party.when_held} for #{party.theme}!
+
+-- #{party.host}
