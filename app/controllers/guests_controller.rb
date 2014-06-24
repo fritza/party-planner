@@ -62,12 +62,19 @@ class GuestsController < ApplicationController
   end
   
   def create_from_cnetid
-    puts params
+    # TODO: Guest::new_from_cnetid shoud raise if the record
+    # does not exist or is not in the proper group.
+    # Also, there could be all kinds of neat things you could do
+    # if you had a mapping from group ID to an English phrase:
+    # a prioritized way to give a name to the user’s "best" organization.
+    
     @guest = Guest.new_from_cnetid(params[:cnetid])
     respond_to do |format|
       if ! @guest
+       # debugger
         @guest = Guest.new
-        flash[:notice] = "Nobody has the CNetID #{params[:cnetid]}"
+        @guest.errors.add(:cnetid, "#{params[:cnetid]} doesn't belong to anyone in Web Services.")
+#        flash[:notice] = "Nobody in Web Services has the CNetID #{params[:cnetid]}"
         format.html {render :new }
         format.json {render json: nil, status: :unprocessable_entity }
         # FIXME: I’m sure the JSON format is wrong.
